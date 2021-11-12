@@ -97,6 +97,8 @@ namespace Software_Biblioteca
                 {
                     throw new Exception("Il numero delle pagine non può essere minore o uguale a 0");
                 }
+
+                _nPagine = value;
             }
 
             get

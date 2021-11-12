@@ -25,24 +25,45 @@ namespace Software_Biblioteca
         {
             InitializeComponent();
 
-            biblioteca = new Biblioteca("Malatestiana","piazza",new List<DateTime>(),new List<DateTime>(),new List<Libro>());
+            List<Libro> libri = new List<Libro>();
+
+            string data = "23/11/2012";
+
+            DateTime annoPub= DateTime.Parse(data);
+            
+
+            libri.Add(new Libro("Learning not to drown","Anna shinoda","Buenavista",200,annoPub));
+
+            string apertura = "8:00";
+            string chiusura = "12:00";
+
+            List<DateTime> orariApertura = new List<DateTime>();
+
+            orariApertura.Add(DateTime.Parse(apertura));
+
+            List<DateTime> orariChiusura = new List<DateTime>();
+
+            orariChiusura.Add(DateTime.Parse(chiusura));
+
+
+            biblioteca = new Biblioteca("Malatestiana","piazza",orariApertura,orariChiusura,libri);
 
             bibliotecaNL.Content = biblioteca.Nome;
 
             indirizzoBL.Content = biblioteca.Indirizzo;
 
-            orariAL.SelectedItem = null;
-            orariCL.SelectedItem = null;
+            orariAL.ItemsSource = null;
+            orariCL.ItemsSource = null;
 
-            orariAL.SelectedItem = biblioteca.OrariApertura;
-            orariCL.SelectedItem = biblioteca.OrariChiusura;
+            orariAL.ItemsSource = biblioteca.OrariApertura;
+            orariCL.ItemsSource = biblioteca.OrariChiusura;
         }
 
         private void cercaB_Click(object sender, RoutedEventArgs e)
         {
             if (titoloRB.IsChecked == true)
             {
-                Libro l = biblioteca.CercaTitolo(cercaT.Text);
+                Libro l = biblioteca.RicercaTitolo(cercaT.Text);
 
                 cercaLi.Items.Clear();
 
@@ -50,7 +71,7 @@ namespace Software_Biblioteca
             }
             else
             {
-                List<Libro> libri = biblioteca.CercaAutore(cercaT.Text);
+                List<Libro> libri = biblioteca.RicercaAutore(cercaT.Text);
 
                 cercaLi.ItemsSource = null;
 
@@ -72,7 +93,7 @@ namespace Software_Biblioteca
 
             nPagineT.Text = l.Pagine.ToString();
 
-            annoT.Text = l.Pubblicazione.Year;
+            annoT.Text = l.Pubblicazione.Year.ToString();
 
 
         }
@@ -85,7 +106,7 @@ namespace Software_Biblioteca
 
                 DateTime data = DateTime.Parse(annoT.Text);
 
-                Libro l = new Libro(titoloT.Text,autoreT.Text,data,editoreT.Text,nPagine);
+                Libro l = new Libro(titoloT.Text,autoreT.Text,editoreT.Text,nPagine,data);
 
                 biblioteca.Libri.Add(l);
 

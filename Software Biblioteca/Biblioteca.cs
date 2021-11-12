@@ -49,9 +49,9 @@ namespace Software_Biblioteca
             }
         }
 
-        public List<DateTime> OrariApuertura { set; get; }
+        public List<DateTime> OrariApertura { set; get; }
 
-        public List<DateTime> OrariChisura { set; get; }
+        public List<DateTime> OrariChiusura { set; get; }
 
         public List<Libro> Libri { set; get; }
 
@@ -59,14 +59,14 @@ namespace Software_Biblioteca
         {
             Nome = nome;
             Indirizzo = indirizzo;
-            OrariApuertura = orariApertura;
-            OrariChisura = orariChiusura;
+            OrariApertura = orariApertura;
+            OrariChiusura = orariChiusura;
             Libri = libri;
         }
 
         public Libro RicercaTitolo(string titolo)
         {
-            Libro libroReturn;
+            Libro libroReturn = null;
             foreach(Libro l in Libri)
             {
                 if(l.Titolo == titolo)
@@ -84,7 +84,7 @@ namespace Software_Biblioteca
 
             foreach(Libro l in Libri)
             {
-                if(l.Autore = autore)
+                if(l.Autore == autore)
                 {
                     libriRet.Add(l);
                 }
