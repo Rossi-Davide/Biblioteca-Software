@@ -55,6 +55,42 @@ namespace Software_Biblioteca
 
         public List<Libro> Libri { set; get; }
 
+        public Biblioteca(string nome,string indirizzo,List<DateTime> orariApertura, List<DateTime> orariChiusura, List<Libro> libri)
+        {
+            Nome = nome;
+            Indirizzo = indirizzo;
+            OrariApuertura = orariApertura;
+            OrariChisura = orariChiusura;
+            Libri = libri;
+        }
 
+        public Libro RicercaTitolo(string titolo)
+        {
+            Libro libroReturn;
+            foreach(Libro l in Libri)
+            {
+                if(l.Titolo == titolo)
+                {
+                    libroReturn = l;
+                }
+            }
+
+            return libroReturn;
+        }
+
+        public List<Libro> RicercaAutore(string autore)
+        {
+            List < Libro > libriRet = new List<Libro>();
+
+            foreach(Libro l in Libri)
+            {
+                if(l.Autore = autore)
+                {
+                    libriRet.Add(l);
+                }
+            }
+
+            return libriRet;
+        }
     }
 }
