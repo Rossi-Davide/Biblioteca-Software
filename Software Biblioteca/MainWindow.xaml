@@ -7,6 +7,24 @@
         mc:Ignorable="d"
         Title="MainWindow" Height="450" Width="800">
     <Grid>
-        
+        <Label x:Name="bibliotecaNL" Content="Label" HorizontalAlignment="Left" Margin="268,10,0,0" VerticalAlignment="Top" Height="36" Width="205" FontSize="18" FontWeight="Bold"/>
+        <Label x:Name="indirizzoBL" Content="Indirizzo:" HorizontalAlignment="Left" Margin="18,60,0,0" VerticalAlignment="Top" Width="218"/>
+        <ListBox x:Name="cercaLi" HorizontalAlignment="Left" Height="227" Margin="10,182,0,0" VerticalAlignment="Top" Width="137" SelectionChanged="cercaLi_SelectionChanged"/>
+        <TextBox x:Name="cercaT" HorizontalAlignment="Left" Height="37" Margin="10,131,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="197"/>
+        <Button x:Name="cercaB" Content="Cerca" HorizontalAlignment="Left" Margin="212,131,0,0" VerticalAlignment="Top" Width="96" Height="37" Click="cercaB_Click"/>
+        <RadioButton x:Name="autoreRB" Content="Autore" HorizontalAlignment="Left" Margin="177,182,0,0" VerticalAlignment="Top"/>
+        <RadioButton x:Name="titoloRB" Content="Titolo" HorizontalAlignment="Left" Margin="177,202,0,0" VerticalAlignment="Top" Width="59" IsChecked="True"/>
+        <TextBox x:Name="titoloT" HorizontalAlignment="Left" Height="23" Margin="552,117,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="172"/>
+        <TextBox x:Name="autoreT" HorizontalAlignment="Left" Height="23" Margin="552,151,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="172"/>
+        <TextBox x:Name="annoT" HorizontalAlignment="Left" Height="23" Margin="552,194,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="172"/>
+        <TextBox x:Name="nPagineT" HorizontalAlignment="Left" Height="23" Margin="552,231,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="172"/>
+        <TextBox x:Name="editoreT" HorizontalAlignment="Left" Height="23" Margin="552,259,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="172"/>
+        <Button x:Name="creaB" Content="Crea Libro" HorizontalAlignment="Left" Margin="552,304,0,0" VerticalAlignment="Top" Width="97" Height="45"/>
+        <Label Content="Titolo:" HorizontalAlignment="Left" Margin="427,113,0,0" VerticalAlignment="Top" Width="135"/>
+        <Label Content="Autore:" HorizontalAlignment="Left" Margin="427,148,0,0" VerticalAlignment="Top" Width="135"/>
+        <Label Content="Anno pubblicazione:" HorizontalAlignment="Left" Margin="427,191,0,0" VerticalAlignment="Top" Width="135"/>
+        <Label Content="Numero pagine:" HorizontalAlignment="Left" Margin="427,228,0,0" VerticalAlignment="Top" Width="135"/>
+        <Label Content="Editore:" HorizontalAlignment="Left" Margin="427,256,0,0" VerticalAlignment="Top" Width="135"/>
+
     </Grid>
 </Window>
