@@ -25,6 +25,8 @@ namespace Software_Biblioteca
         {
             InitializeComponent();
 
+            
+            //lista creata solo a scopo dimostrativo
             List<Libro> libri = new List<Libro>();
 
             string data = "23/11/2012";
@@ -34,6 +36,7 @@ namespace Software_Biblioteca
 
             libri.Add(new Libro("Learning not to drown","Anna shinoda","Buenavista",200,annoPub));
 
+            //orari creati a scopo dimostrativo
             string apertura = "8:00";
             string chiusura = "12:00";
 
