@@ -31,7 +31,11 @@ namespace Software_Biblioteca
 
             indirizzoBL.Content = biblioteca.Indirizzo;
 
+            orariAL.SelectedItem = null;
+            orariCL.SelectedItem = null;
 
+            orariAL.SelectedItem = biblioteca.OrariApertura;
+            orariCL.SelectedItem = biblioteca.OrariChiusura;
         }
 
         private void cercaB_Click(object sender, RoutedEventArgs e)
@@ -82,6 +86,10 @@ namespace Software_Biblioteca
                 DateTime data = DateTime.Parse(annoT.Text);
 
                 Libro l = new Libro(titoloT.Text,autoreT.Text,data,editoreT.Text,nPagine);
+
+                biblioteca.Libri.Add(l);
+
+                
             }catch(Exception ex)
             {
                 MessageBox.Show(ex.Message);

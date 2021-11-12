@@ -19,12 +19,16 @@
         <TextBox x:Name="annoT" HorizontalAlignment="Left" Height="23" Margin="552,194,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="172"/>
         <TextBox x:Name="nPagineT" HorizontalAlignment="Left" Height="23" Margin="552,231,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="172"/>
         <TextBox x:Name="editoreT" HorizontalAlignment="Left" Height="23" Margin="552,259,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="172"/>
-        <Button x:Name="creaB" Content="Crea Libro" HorizontalAlignment="Left" Margin="552,304,0,0" VerticalAlignment="Top" Width="97" Height="45"/>
+        <Button x:Name="creaB" Content="Crea Libro" HorizontalAlignment="Left" Margin="552,304,0,0" VerticalAlignment="Top" Width="97" Height="45" Click="creaB_Click"/>
         <Label Content="Titolo:" HorizontalAlignment="Left" Margin="427,113,0,0" VerticalAlignment="Top" Width="135"/>
         <Label Content="Autore:" HorizontalAlignment="Left" Margin="427,148,0,0" VerticalAlignment="Top" Width="135"/>
         <Label Content="Anno pubblicazione:" HorizontalAlignment="Left" Margin="427,191,0,0" VerticalAlignment="Top" Width="135"/>
         <Label Content="Numero pagine:" HorizontalAlignment="Left" Margin="427,228,0,0" VerticalAlignment="Top" Width="135"/>
         <Label Content="Editore:" HorizontalAlignment="Left" Margin="427,256,0,0" VerticalAlignment="Top" Width="135"/>
+        <ListBox x:Name="orariAL" HorizontalAlignment="Left" Height="100" Margin="161,304,0,0" VerticalAlignment="Top" Width="139"/>
+        <ListBox x:Name="orariCL" HorizontalAlignment="Left" Height="100" Margin="305,304,0,0" VerticalAlignment="Top" Width="132"/>
+        <Label x:Name="indirizzoBL_Copy" Content="Apertura:" HorizontalAlignment="Left" Margin="161,264,0,0" VerticalAlignment="Top" Width="87" FontWeight="Bold"/>
+        <Label x:Name="indirizzoBL_Copy1" Content="Chisura:" HorizontalAlignment="Left" Margin="305,264,0,0" VerticalAlignment="Top" Width="87" FontWeight="Bold"/>
 
     </Grid>
 </Window>
